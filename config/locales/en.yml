@@ -1,64 +1,199 @@
 en:
   record:
-    not_found: " %{object_name} not found"
+    not_found: " %{object_name}が見つかりません。"
+  layouts:
+    menu_admin:
+      users: ユーザー
+      candidates: 候補者
+      posts: ポスト
+      jobs: 仕事
+      slider_images: カルーセル
   admins:
+    admins:
+      index:
+        create: 新規登録
+        id: ID
+        title: 名前
+        email: メール
+        role: Role
+        action: アクション
+        confirm: 本当にこのユーザーを削除しますか？
+      edit:
+        title: アドミン情報編集
+      new:
+        title: アドミン新規登録
+      admin_form:
+        name: 名前
+        email: メール
+        password: パスワード
+        confirmation_password: 再パスワード
+        save: 保存
+      create:
+        success: アドミンが成功に登録できました。
+        failure: アドミンの登録が失敗でした。
+      update:
+        success: アドミンが成功に更新できました。
+        failure: アドミンの更新が失敗でした。
+      destroy:
+        success: アドミンが成功に削除できました。
+        failure: アドミンの削除が失敗でした。
+      publish:
+        success: "%{action} '%{admin}' 成功"
+        failure: "%{action} '%{admin}' 失敗"
     posts:
       edit:
-        title: Edit post information
+        title: ポスト情報の編集
       new:
-        title: Create new post
+        title: ポストの新規登録
       post_form:
-        title: Post title
-        image: Post image
-        content: Post content
-        publish: Publish?
-        save: Save
+        title: ポストのタイトル
+        image: ポストの写真
+        content: ポストの内容
+        publish: 発行
+        save: 保存
       post:
-        publish: Publish
-        unpublish: Unpublish
+        publish: 発行済み
+        unpublish: 未発行
+        confirm: このポストを削除しますか？?
       index:
-        create: Create
+        create: 新規登録
       create:
-        success: Create Post successfully
-        failure: Create Post failure
+        success: ポストが成功に登録できました。
+        failure: ポストの登録が失敗でした。
       update:
-        success: Update Post successfully
-        failure: Update Post failure
+        success: ポストが成功に更新できました。
+        failure: ポストの更新が失敗でした。
       destroy:
-        success: Delete Post successfully
-        failure: Delete Post failure
+        success: ポストが成功に削除できました。
+        failure: ポストの削除が失敗でした。
       publish:
-        success: "%{action} '%{post}' successfully"
-        failure: "%{action} '%{post}' failure"
+        success: "%{action} '%{post}' 成功"
+        failure: "%{action} '%{post}' 失敗"
+    jobs:
+      index:
+        create: 新規登録
+        id: ID
+        title: 仕事のタイトル
+        quantity: 募集人数
+        place: 勤務地
+        salary: 給料
+        content: 仕事の内容
+        expired_time: 募集期間
+        action: アクション
+        confirm: この仕事を本当に削除しますか？
+
+      edit:
+        title: 仕事の内容の編集
+      new:
+        title: 仕事の新規登録
+      job_form:
+        title: 仕事のタイトル
+        quantity: 数
+        place: 場所
+        salary: 給料
+        save: 保存
+      create:
+        success: 仕事が成功に登録できました。
+        failure: 仕事の登録が失敗でした。
+      update:
+        success: 仕事が成功に更新できました。
+        failure: 仕事の更新が失敗でした。
+      destroy:
+        success: 仕事が成功に削除できました。
+        failure: 仕事の削除が失敗でした。
+      publish:
+        success: "%{action} '%{job}' 成功"
+        failure: "%{action} '%{job}' 失敗"
+    candidates:
+      index:
+        title: 候補者
+        id: ID
+        name: 名前
+        email: メール
+        phone_number: 電話番号
+        website: ウェブサイト
+        content: 内容
+        action: アクション
+        status: ステータス
+        contacted: 連絡済み
+        not_contact: 未連絡
+      contact:
+        contacted_success: Xác nhận Đã liên lạc với ứng viên '%{candidate}' thành công.
+        contacted_failure: Xác nhận Đã liên lạc với ứng viên '%{candidate}' không thành công.
+        not_contact_success: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' thành công.
+        not_contact_failure: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' không thành công.
+      create:
+        success: 御連絡頂きありがとうございました。出来る限りにこちらから連絡させて頂きます。
+        failure: 連絡先情報が無効です。
+    slider_images:
+      edit:
+        title: カルーセル
+      new:
+        title: カルーセルの新規登録
+      slider_image_form:
+        slider_image: カルーセル
+        publish: 発行
+        save: 保存
+        title: カルーセルの新規登録
+      slider_image:
+        publish: 発行済
+        unpublish: 未発行
+        confirm: 本当にこの写真を削除しますか?
+      index:
+        create: 写真を更新
+      create:
+        success: カルーセルが成功に登録できました。
+        failure: カルーセルの登録が失敗でした。
+      update:
+        success: カルーセルが成功に更新できました。
+        failure: カルーセルの更新が失敗でした。
+      destroy:
+        success: カルーセルが成功に削除できました。
+        failure: カルーセルの削除が失敗でした。
+      publish:
+        success: "カルーセルの%{action}が成功でした"
+        failure: "カルーセルの%{action}が失敗でした"
   static_pages:
     bussiness_content:
       title: 事業内容
     recruitment_benefit:
       title: 外国人採用にはメリット・デメリット
+    engineer_interpreter:
+      title: エンジニア・通訳
     home:
-      btn_all_job: See All Jobs
+      btn_all_job: 仕事一覧
 
   posts:
     show:
-      comments: Comments
-      recent_posts: Recent Posts
-      share: "Share this:"
+      comments: コメント
+      recent_posts: この間のポスト
+      share: "共有"
   comments:
     form:
-      submit: Submit
-      remember: Rememberme with next comments
-      name: Name
-      email: Email
-      comment: Comment
+      submit: 決定
+      remember: 次のコメントに私を保存
+      name: 名前
+      email: メール
+      comment: コメント
     create:
-      failure: Error! Please try again
+      failure: 失敗でした! 再度試してください。
   jobs:
     job_item:
-      amount: Quantity
-      job_detail: Job Detail
-      location: Location
-      salary: Salary
-      duration: Duration
-
-
-      
+      amount: 募集人数
+      job_detail: 仕事の内容
+      location: 勤務地
+      salary: 給料
+      duration: 募集期間
+  shared:
+    contact_form:
+      title: 連絡先を送る
+      name: 名前と姓
+      email: メール
+      phone_number: 電話番号
+      website: Website
+      content: コンテンツ
+      contact: 提出する
+  job_comments:
+    form:
+      submit: 決定
+      remember: 次のコメントに私を保存

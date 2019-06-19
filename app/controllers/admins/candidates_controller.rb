@@ -30,6 +30,8 @@ class Admins::CandidatesController < Admins::BaseController
 
     if @candidate.save
       flash[:success] = t ".success"
+
+      ContactMailer.contact_email().deliver
     else
       flash[:danger] = t ".failure"
     end
