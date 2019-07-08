@@ -559,3 +559,20 @@ blockquote p {
     margin: 0;
   }
 }
+
+.content-box {
+  background: #f8f8f8;
+  padding: 30px;
+
+  h3 {
+    color: $theme-color;
+
+    &:after {
+      content: "";
+      height: 2px;
+      width: 15%;
+      display: block;
+      background: $theme-color;
+    }
+  }
+}

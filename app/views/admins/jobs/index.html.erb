@@ -17,7 +17,6 @@
                   <th scope="col"><%= t ".quantity" %></th>
                   <th scope="col"><%= t ".place" %></th>
                   <th scope="col"><%= t ".salary" %></th>
-                  <th scope="col" class="max-lenght-content"><%= t ".content" %></th>
                   <th scope="col"><%= t ".expired_time" %></th>
                   <th scope="col"><%= t ".action" %></th>
                 </tr>
@@ -30,7 +29,6 @@
                     <td class="no-wrap"><%= job.quantity %></td>
                     <td><%= job.place %></td>
                     <td><%= job.salary %></td>
-                    <td class="max-lenght-content"><%= truncate(raw(job.content), length: 150) %></td>
                     <td class="no-wrap"><%= job.start_date.strftime("%m-%d-%Y") %> ~ <%= job.end_date.strftime("%m-%d-%Y") %></td>
                     <td>
                       <div class="btn-align-center row">

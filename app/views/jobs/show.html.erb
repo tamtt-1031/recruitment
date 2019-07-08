@@ -1,60 +1,126 @@
 <div class="container gf-job-detail">
-  <div  class="job-title">
-  <h3 class="mb0"><%= @job.title %></h3>
+  <div class="job-title">
+    <h3 class="mb0"><%= @job.title %></h3>
   </div>
   <div class="separator"></div>
-	<div class="row">
+  <div class="row">
     <div class="col-lg-8 gf-job-detail">
-      <div class="clearfix gf-entry-content">
-        <%= raw @job.content %>
+      <div class="content-box">
+        <h3><%= t(".benefit") %></h3>
+        <div class="d-flex">
+          <h5 class="mr10">給与:</h5>
+          <p>
+            <%= @job.salary %>
+          </p>
+        </div>
+
+        <div>
+          <h5>待遇</h5>
+          <div class="ml30">
+            <%= raw @job.job_benefit %>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content-box mt30">
+        <h3><%= t(".job_info") %></h3>
+        <div class="d-flex">
+          <h5 class="mr10">企業名:</h5>
+          <p>
+            <%= @job.company_name %>
+          </p>
+        </div>
+
+        <div class="d-flex">
+          <h5 class="mr10">勤務地:</h5>
+          <p>
+            <%=@job.place %>
+          </p>
+        </div>
+
+        <div class="d-flex">
+          <h5 class="mr10">ビザ資格:</h5>
+          <p>
+            <%=@job.job_title %>
+          </p>
+        </div>
+        <div class="d-flex">
+          <h5 class="mr10">職種:</h5>
+          <p>
+            <%=@job.cv_content %>
+          </p>
+        </div>
+
+        <div class="d-flex">
+          <h5 class="mr10">採用予定数:</h5>
+          <p>
+            <%=@job.quantity %>
+          </p>
+        </div>
+
+        <div class="d-flex">
+          <h5 class="mr10">募集方法:</h5>
+          <p>
+            <%=@job.recruiment_type %>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="content-box mt30">
+        <h3><%= t ".requirement" %></h3>
+        <div class="ml30">
+          <%= raw @job.job_requirement %>
+        </div>
       </div>
 
       <% if @job.job_comments.count > 0 %>
-				<div class="comment-wrapper">
-					<h3>
-						<%= t ".comments" %>
-					</h3>
-					<%= render partial: "comment", locals: {comments: @job_comments} %>
-					<%= paginate @job_comments %>
-				</div>
-			<% end %>
+      <div class="comment-wrapper">
+        <h3>
+          <%= t ".comments" %>
+        </h3>
+        <%= render partial: "comment", locals: {comments: @job_comments} %>
+        <%= paginate @job_comments %>
+      </div>
+      <% end %>
 
       <div class="gf-post-comments">
-				<%= render partial: "job_comments/form" %>
-			</div>
+        <%= render partial: "job_comments/form" %>
+      </div>
 
     </div>
-      <div class="col-lg-4">
-        <div class="gf-job-meta list-inline">
-          <div>
-            <p><i class="fa fa-group mr5"></i>採用予定数</p>
-            <span>
-              <%= @job.quantity %>
-            </span>
-          </div>
-          <div>
-            <p><i class="fa fa-map-marker mr5"></i>勤務地</p>
-            <span>
-              <%=@job.place %>
-            </span>
-          </div>
-          <div>
+    <div class="col-lg-4">
+      <div class="gf-job-meta list-inline">
+        <div>
+          <p><i class="fa fa-group mr5"></i>採用予定数</p>
+          <span>
+            <%= @job.quantity %>
+          </span>
+        </div>
+        <div>
+          <p><i class="fa fa-map-marker mr5"></i>勤務地</p>
+          <span>
+            <%=@job.place %>
+          </span>
+        </div>
+        <div>
           <p><i class="fa fa-money mr5"></i>給与</p>
-            <span>
-              <%= @job.salary %>
-            </span>
-          </div>
-          <div>
-            <p><i class="fa fa-calendar mr5"></i> Thời gian nạp hồ sơ</p>
-            <span>
-              <%= @job.start_date.strftime("%Y-%m-%d") %> - <%= @job.end_date.strftime("%Y-%m-%d") %>
-            </span>
-          </div>
-          <div class="social-share-wrapper">
-            <p><i class="fa fa-share-alt"></i>Chia sẻ công việc </p>
-            <%= social_share_button_tag(@job.title) %>
-          </div>
+          <span>
+            <%= @job.salary %>
+          </span>
+        </div>
+        <div>
+          <p><i class="fa fa-calendar mr5"></i> Thời gian nạp hồ sơ</p>
+          <span>
+            <%= @job.start_date.strftime("%Y-%m-%d") %> - <%= @job.end_date.strftime("%Y-%m-%d") %>
+          </span>
+        </div>
+        <div class="social-share-wrapper">
+          <p><i class="fa fa-share-alt"></i>Chia sẻ công việc </p>
+          <%= social_share_button_tag(@job.title) %>
         </div>
       </div>
+    </div>
   </div>
 </div>

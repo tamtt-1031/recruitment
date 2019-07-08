@@ -22,8 +22,33 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :content, t(".content"), class: "col-form-label  required" %><br>
-    <%= f.cktext_area :content, ckeditor: { language: 'us'} %>
+    <%= f.label :title, t(".company_name"), class: "col-form-label  required" %>
+    <%= f.text_field :company_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title, t(".industry"), class: "col-form-label  required" %>
+    <%= f.text_field :job_title, class: 'form-control' %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :title, t(".recruiment_type"), class: "col-form-label  required" %>
+    <%= f.text_field :recruiment_type, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title, t(".benefit"), class: "col-form-label  required" %>
+    <%= f.cktext_area :job_benefit, ckeditor: { language: 'us'} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title, t(".requirement"), class: "col-form-label  required" %>
+    <%= f.cktext_area :job_requirement, ckeditor: { language: 'us'} %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :title, t(".cv_info"), class: "col-form-label  required" %>
+    <%= f.text_field :cv_content, class: 'form-control' %>
   </div>
 
   <div class="row form-group">

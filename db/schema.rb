@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_131237) do
+ActiveRecord::Schema.define(version: 2019_06_19_124804) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(version: 2019_06_17_131237) do
     t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "company_name"
+    t.string "job_title"
+    t.text "cv_content"
+    t.string "recruiment_type"
+    t.text "job_benefit"
+    t.text "job_requirement"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

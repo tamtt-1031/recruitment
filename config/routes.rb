@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/engineer_interpreter", to: "static_pages#engineer_interpreter"
   get "/study_abroad", to: "static_pages#study_abroad"
   get "/download_pdf", to: "static_pages#download_pdf"
+  get "/ask", to: "static_pages#question"
 
   resources :jobs, only: [:show, :index] do
     resources :job_comments

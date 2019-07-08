@@ -35,4 +35,6 @@ class StaticPagesController < ApplicationController
   def interns; end
 
   def job_details; end
+
+  def question; end
 end

@@ -50,7 +50,10 @@ class Admins::JobsController < Admins::BaseController
   private
 
   def job_params
-    params.require(:job).permit(:title, :quantity, :place, :salary, :content, :start_date, :end_date)
+    params.require(:job).permit(:title, :quantity, :place, :salary, :content,
+                                :start_date, :end_date, :recruiment_type, :job_benefit,
+                                :company_name, :job_title, :cv_content, :job_requirement
+                                )
   end
 
   def load_job

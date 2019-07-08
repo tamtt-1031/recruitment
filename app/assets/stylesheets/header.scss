@@ -121,15 +121,17 @@ header {
         .information-title {
             color: $theme-color;
             display: block;
+            font-size: 17px;
+            margin-left: 30px;
         }
 
         a {
             display: flex;
             justify-content: flex-end;
             margin-right: 10px;
-            
+
             &.accent-color {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             i {

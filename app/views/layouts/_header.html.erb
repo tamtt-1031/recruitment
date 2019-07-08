@@ -9,8 +9,8 @@
       <div class="information">
         <div>
           <span class="information-title">お気軽にお問い合わせください。</span>
-          <a class="accent-color mobile-phone" href="tel:078-595-9099">
-            <strong><i class="fa fa-phone"></i>078-595-9099</strong>
+          <a class="accent-color mobile-phone" href="tel:<%= Settings.company_info.mobile_phone %>">
+            <strong><i class="fa fa-phone"></i><%= Settings.company_info.mobile_phone %></strong>
           </a>
         </div>
         <div>
@@ -40,7 +40,7 @@
               <%= link_to "事業内容", job_details_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "求人情報", jobs_path, class: "nav-link" %>
+            <%= link_to "Q&A", ask_path, class: "nav-link" %>
           </li>
         </ul>
         <% if false %>

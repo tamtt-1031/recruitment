@@ -1,7 +1,45 @@
 en:
   record:
     not_found: " %{object_name} not found"
+  layouts:
+    menu_admin:
+      users: Users
+      candidates: Candidates
+      posts: Posts
+      jobs: Jobs
+      slider_images: Slider Images
   admins:
+    admins:
+      index:
+        create: Create
+        id: ID
+        title: Name
+        email: Email
+        role: Role
+        action: Action
+        confirm: Do you want to delete this user?
+      edit:
+        title: Edit admin information
+      new:
+        title: Create new admin
+      admin_form:
+        name: Name
+        email: Email
+        password: Password
+        confirmation_password: Confirmation password
+        save: Save
+      create:
+        success: Create Admin successfully
+        failure: Create Admin failure
+      update:
+        success: Update Admin successfully
+        failure: Update Admin failure
+      destroy:
+        success: Delete Admin successfully
+        failure: Delete Admin failure
+      publish:
+        success: "%{action} '%{admin}' successfully"
+        failure: "%{action} '%{admin}' failure"
     posts:
       edit:
         title: Edit post information
@@ -16,6 +54,7 @@ en:
       post:
         publish: Publish
         unpublish: Unpublish
+        confirm: Do you want to delete this post?
       index:
         create: Create
       create:
@@ -30,11 +69,103 @@ en:
       publish:
         success: "%{action} '%{post}' successfully"
         failure: "%{action} '%{post}' failure"
+    jobs:
+      index:
+        create: Create
+        id: ID
+        title: Job Title
+        quantity: 募集人数
+        place: 勤務地
+        salary: 給料
+        content: 仕事の内容
+        expired_time: 募集期間
+        action: Action
+        confirm: Do you want to delete this job?
+
+      edit:
+        title: Edit job information
+      new:
+        title: Create new job
+      job_form:
+        title: Job title
+        quantity: Quantity
+        place: Place
+        salary: Salary
+        save: Save
+        company_name: Company Name
+        cv_info: CV Information
+        benefit: Job Benefit
+        requirement: Job Requirement
+        recruiment_type: How To Apply
+        industry: Industry for VISA
+      create:
+        success: Create Job successfully
+        failure: Create Job failure
+      update:
+        success: Update Job successfully
+        failure: Update Job failure
+      destroy:
+        success: Delete Job successfully
+        failure: Delete Job failure
+      publish:
+        success: "%{action} '%{job}' successfully"
+        failure: "%{action} '%{job}' failure"
+    candidates:
+      index:
+        title: Candidates
+        id: ID
+        name: Name
+        email: Email
+        phone_number: Phone Number
+        website: Website
+        content: Content
+        action: Action
+        status: Status
+        contacted: Contacted
+        not_contact: Not Contact
+      contact:
+        contacted_success: Xác nhận Đã liên lạc với ứng viên '%{candidate}' thành công.
+        contacted_failure: Xác nhận Đã liên lạc với ứng viên '%{candidate}' không thành công.
+        not_contact_success: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' thành công.
+        not_contact_failure: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' không thành công.
+      create:
+        success: Cam on ban da lien he, chung toi se lien lac voi ban som nhat co the
+        failure: Thong tin lien he cua ban khong hop le
+    slider_images:
+      edit:
+        title: Edit Slider Image
+      new:
+        title: Create new Slider Image
+      slider_image_form:
+        slider_image: Slider Image
+        publish: Publish?
+        save: Save
+        title: Create new Slider Image
+      slider_image:
+        publish: Publish
+        unpublish: Unpublish
+        confirm: Do you want to delete this picture?
+      index:
+        create: Update new Image
+      create:
+        success: Create Slider Image successfully
+        failure: Create Slider Image failure
+      update:
+        success: Update Slider Image successfully
+        failure: Update Slider Image failure
+      destroy:
+        success: Delete Slider Image successfully
+        failure: Delete Slider Image failure
+      publish:
+        success: "%{action} Slider Image successfully"
+        failure: "%{action} Slider Image failure"
   static_pages:
     bussiness_content:
       title: 事業内容
     recruitment_benefit:
       title: 外国人採用にはメリット・デメリット
+    engineer_interpreter:
+      title: エンジニア・通訳
     home:
       btn_all_job: See All Jobs
 
@@ -54,11 +185,26 @@ en:
       failure: Error! Please try again
   jobs:
     job_item:
-      amount: Quantity
-      job_detail: Job Detail
-      location: Location
-      salary: Salary
-      duration: Duration
+      amount: 募集人数
+      job_detail: 仕事の内容
+      location: 勤務地
+      salary: 給料
+      duration: 募集期間
+    show:
+      benefit: 報酬
+      job_info: 仕事情報
+      requirement: 希望の人材
+  shared:
+    contact_form:
+      title: 連絡先を送る
+      name: 名前と姓
+      email: メール
+      phone_number: 電話番号
+      website: Website
+      content: コンテンツ
+      contact: 提出する
 
-
-      
+  job_comments:
+    form:
+      submit: Submit
+      remember: Rememberme with next comments
