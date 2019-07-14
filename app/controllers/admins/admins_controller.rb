@@ -50,7 +50,11 @@ class Admins::AdminsController < Admins::BaseController
   private
 
   def admin_params
-    params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+    if params["admin"]["password"]
+      params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+    else
+      params.require(:admin).permit(:name, :email)
+    end
   end
 
   def load_admin

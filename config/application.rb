@@ -9,6 +9,7 @@ Dotenv.load
 module Recruitment
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.i18n.default_locale = :ja
     config.load_defaults 5.2
     config.autoload_paths += %W(#{config.root}/vendor/assets/owlcarousel)
 
