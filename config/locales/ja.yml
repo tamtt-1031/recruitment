@@ -1,9 +1,41 @@
 ja:
   activerecord:
+    attributes:
+      job:
+        title: 求人情報の件名
+        quantity: 募集人数	
+        content: 職種
+        place: 勤務先
+        working_hours: 勤務時間
+        salary: 給与
+        allowance: 手当
+        salary_raise: 昇給
+        holiday: 休日
+        vacation: 休暇
+        social_insurance: 社会保険
+        welfare: 福利厚生
+        documents: 提出書類
     errors:
       models:
         job:
           attributes:
+            working_hours:
+              blank: は必ず入力してください。
+            allowance:
+              blank: は必ず入力してください。
+            salary_raise:
+              blank: は必ず入力してください。
+            holiday:
+              blank: は必ず入力してください。
+            vacation:
+              holiday: afb
+              blank: は必ず入力してください。
+            social_insurance:
+              blank: は必ず入力してください。
+            welfare:
+              blank: は必ず入力してください。
+            documents:
+              blank: は必ず入力してください。
             title:
               blank: は必ず入力してください。
             quantity:
