@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     @posts = Post.publish.newest.limit 6
     @jobs = Job.newest.limit 5
-    @candidate = Candidate.new
+    @client = Client.new
     @slider_image = Image.publish.last
   end
 
@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
   def about; end
 
   def contact
-    @candidate = Candidate.new
+    @client = Client.new
   end
 
   def bussiness_content; end

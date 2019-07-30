@@ -1,42 +1,120 @@
 <div data-aos="fade-up" class="contract-wrapper">
-  <%= form_for [:admins, @candidate], {class: "form-horizontal", id: "form-contact"} do |f| %>
+  <%= form_for [:admins, @client], {class: "form-horizontal", id: "form-contact"} do |f| %>
     <div class="gf-heading">
       <h2 class="heading-title accent-color"><%= t ".title"%></h2>
     </div>
     <div class="container">
+      <h4 class="accent-color"> <%= t(".company_infor") %> </h4>
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
           <div class="form-group">
-            <%= f.label :name, t(".name"), class: "control-label required" %>
-            <%= f.text_field :name, class: 'form-control', id: "input-name" %>
+            <%= f.label :company_name, t(".company_name"), class: "control-label required" %>
+            <%= f.text_field :company_name, class: 'form-control', id: "input-name", required: true %>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
           <div class="form-group">
-            <%= f.label :email, t(".email"), class: "control-label required" %>
-            <%= f.email_field :email, class: 'form-control', id: "input-email" %>
+            <%= f.label :department, t(".department"), class: "control-label" %>
+            <%= f.text_field :department, class: 'form-control', id: "input-name" %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :person_in_charge, t(".person_in_charge"), class: "control-label required" %>
+            <%= f.text_field :person_in_charge, class: 'form-control', id: "input-name", required: true %>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
           <div class="form-group">
             <%= f.label :phone_number, t(".phone_number"), class: "control-label required" %>
-            <%= f.text_field :phone_number, class: 'form-control', id: "input-phone" %>
+            <%= f.text_field :phone_number, class: 'form-control', id: "input-phone", required: true %>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
           <div class="form-group">
-            <%= f.label :company_name, t(".company_name"), class: "control-label" %>
-            <%= f.text_field :company_name, class: 'form-control', id: "input-phone" %>
+            <%= f.label :email, t(".email"), class: "control-label required" %>
+            <%= f.email_field :email, class: 'form-control', id: "input-email", required: true %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :prefecture, t(".prefecture"), class: "control-label required" %>
+            <%= f.text_field :prefecture, class: 'form-control', id: "input-phone", required: true %>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
           <div class="form-group">
-            <%= f.label :content, t(".content"), class: "control-label required" %>
-            <%= f.text_area :content, rows: 5, class: 'form-control', id: "input-review" %>
+            <%= f.label :address, t(".address"), class: "control-label required" %>
+            <%= f.text_field :address, class: 'form-control', id: "input-phone", required: true %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <br/>
+          <h4 class="accent-color"> <%= t(".content") %> </h4>
+          <div class="form-group">
+            <%= f.text_area :content, rows: 5, class: 'form-control', id: "input-review", required: true %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <br/>
+          <h4 class="accent-color"> <%= t(".privacy") %> </h4>
+          <div class="form-group">
+            <div class="form-control col-sm-12 col-md-12 col-lg-12 col-xs-12 privacy" disabled="disabled">
+              <div class="privacy-body">
+                <b>1個人情報の取扱いに対する当社の基本姿勢</b>
+                <br/>
+                当社は、個人情報保護方針を宣言するとともに、当社の役員及び従業者、その他関係者に周知徹底させて実行し、改善・維持してまいります。また、個人情報の取得にあたっては、適法かつ公正な手段によって行い、不正な方法によって取得しないことはもちろん、個人情報の主体である本人に対し個人情報を与えることの任意性及び当該情報を与えなかった場合に本人に生じる結果を通知いたします。
+                <br/><br/>
+
+                <b>2利用目的について</b>
+                <br/>
+                取得個人情報は、お問合せ・お申込み・ご意見などの受付・回答・管理、資料の送付、当社およびグループ会社のサービスに関するご案内、統計データ作成、これらに準ずる業務の遂行のために利用します。また本利用目的に沿って、当社の親会社であるJ-V CONNECTION.及び国内外グループ会社の第三者に限り、個人情報を提供します。
+                <br/><br/>
+
+                <b>3個人情報提供の任意性</b>
+                <br/>
+                個人情報の当社への提供は任意によるものですが、十分な個人情報を提供いただけない場合には、第２項の利用目的を達成できないことがあります。
+                <br/><br/>
+
+                <b>4個人情報の委託</b>
+                <br/>
+                当社で定める個人情報保護の基準を満たした企業に、第２項の利用目的の範囲内において個人情報を委託する場合があります。
+                <br/><br/>
+
+                <b>5個人情報の第三者提供</b>
+                <br/>
+                当社が保有する個人情報は下記の場合を除いて、第三者に提供いたしません。
+                <br/>
+                ・本人の同意がある場合<br/>
+                ・法令に基づく場合<br/>
+                <br/>
+
+                <b>6開示対象個人情報に関する開示等について</b>
+                <br/>
+                当社が保有する開示対象個人情報について、利用目的の通知、開示、訂正、追加又は削除、利用の停止、消去又は第三者への提供の停止（以下、「開示等」といいます。）を請求することができます。当社では、開示等を受け付けた場合は、開示等を請求する手続き等について本人にお知らせし、合理的な範囲で適切かつ迅速に対応させていただきます。お問合せの窓口は下記の苦情・相談窓口担当が対応いたします。
+                <br/><br/>
+
+                <b>7個人情報に関するお問合せ先</b>
+                <br/>
+                個人情報に関する開示等及び苦情・相談に関しては、下記の連絡先へお問合せください。
+                <br/>
+                ＜苦情・相談窓口担当＞：078-595-9099
+              </div>
+
+              <div class="privacy-footer">
+                株式会社J-V CONNECTION<br/>
+  　　　　　　　　 個人情報保護管理者<br/>
+        　　　　　常務執行役員　管理本部長<br/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
