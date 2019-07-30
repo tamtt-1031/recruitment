@@ -3,7 +3,7 @@ ja:
     attributes:
       job:
         title: 求人情報の件名
-        quantity: 募集人数	
+        quantity: 募集人数
         content: 職種
         place: 勤務先
         working_hours: 勤務時間
@@ -88,7 +88,7 @@ ja:
   layouts:
     menu_admin:
       admins: 管理者
-      candidates: 求職者
+      clients: お客様のご連絡先
       posts: お知らせ
       jobs: 求人情報
       slider_images: Image
@@ -197,24 +197,27 @@ ja:
       publish:
         success: "%{action} '%{job}' 成功しました"
         failure: "%{action} '%{job}' 失敗しました"
-    candidates:
+    clients:
       index:
-        title: 求職者
+        title: お客様のご連絡先
         id: ID
-        name: お名前
+        company_name: 貴社名
+        department: 部署名
+        person_in_charge: ご担当者名
+        phone_number: 電話番号
         email: メールアドレス
-        phone_number: Phone Number
-        company_name: 会社名
+        prefecture: 都道府県
+        address: ご住所
         content: 内容
         action: 操作
         status: 状態
         contacted: 連絡済み
         not_contact: 未連絡
       contact:
-        contacted_success: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' thành công.
-        contacted_failure: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' không thành công.
-        not_contact_success: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' thành công.
-        not_contact_failure: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' không thành công.
+        contacted_success: Xác nhận [Đã liên lạc] với company '%{client}' thành công.
+        contacted_failure: Xác nhận [Đã liên lạc] với company '%{client}' không thành công.
+        not_contact_success: Xác nhận [Chưa liên lạc] với company '%{client}' thành công.
+        not_contact_failure: Xác nhận [Chưa liên lạc] với company '%{client}' không thành công.
       create:
         success: "お問い合わせありがとうございます。\n後ほど弊社担当者よりご連絡いたしますので、\n今しばらくお待ちくださいますようよろしくお願い申し上げます。"
         failure: 連絡情報が間違っています
@@ -286,11 +289,16 @@ ja:
   shared:
     contact_form:
       title: サービスに関するお問い合わせ
-      name: お名前
-      email: メールアドレス
+      company_infor: お客様のご連絡先
+      company_name: 貴社名
+      department: 部署名
+      person_in_charge: ご担当者名
       phone_number: 電話番号
-      company_name: 会社名
+      email: メールアドレス
+      prefecture: 都道府県
+      address: ご住所
       content: お問い合わせ
+      privacy: 個人情報の取扱いについて
       contact: 内容を送信
   job_comments:
     form:

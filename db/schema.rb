@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_102147) do
+ActiveRecord::Schema.define(version: 2019_07_30_105733) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -27,19 +27,22 @@ ActiveRecord::Schema.define(version: 2019_07_23_102147) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "candidates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
-    t.text "content"
-    t.string "company_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "contact_status", default: 0
-  end
-
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "company_name"
+    t.string "department"
+    t.string "person_in_charge"
+    t.string "phone_number"
+    t.string "email"
+    t.string "prefecture"
+    t.string "address"
+    t.text "content"
+    t.integer "contact_status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

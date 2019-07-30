@@ -1,164 +1,254 @@
 en:
+  activerecord:
+    attributes:
+      job:
+        title: 求人情報の件名
+        quantity: 募集人数
+        content: 職種
+        place: 勤務先
+        working_hours: 勤務時間
+        salary: 給与
+        allowance: 手当
+        salary_raise: 昇給
+        holiday: 休日
+        vacation: 休暇
+        social_insurance: 社会保険
+        welfare: 福利厚生
+        documents: 提出書類
+    errors:
+      models:
+        job:
+          attributes:
+            working_hours:
+              blank: は必ず入力してください。
+            allowance:
+              blank: は必ず入力してください。
+            salary_raise:
+              blank: は必ず入力してください。
+            holiday:
+              blank: は必ず入力してください。
+            vacation:
+              holiday: afb
+              blank: は必ず入力してください。
+            social_insurance:
+              blank: は必ず入力してください。
+            welfare:
+              blank: は必ず入力してください。
+            documents:
+              blank: は必ず入力してください。
+            title:
+              blank: は必ず入力してください。
+            quantity:
+              blank: は必ず入力してください。
+            place:
+              blank: は必ず入力してください。
+            salary:
+              blank: は必ず入力してください。
+            content:
+              blank: は必ず入力してください。
+            start_date:
+              blank: は必ず入力してください。
+            end_date:
+              blank: は必ず入力してください。
+            company_name:
+              blank: は必ず入力してください。
+            job_title:
+              blank: は必ず入力してください。
+            cv_content:
+              blank: は必ず入力してください。
+            job_benefit:
+              blank: は必ず入力してください。
+            job_requirement:
+              blank: は必ず入力してください。
+            recruiment_type:
+              blank: は必ず入力してください。
+        admin:
+          attributes:
+            name:
+              blank: は必ず入力してください。
+            email:
+              blank: は必ず入力してください。
+            password:
+              blank: は必ず入力してください。
+              too_short: は短すぎです。
+            confirm_password:
+              blank: は必ず入力してください。
+        post:
+          attributes:
+            title:
+              blank: は必ず入力してください。
+            content:
+              blank: は必ず入力してください。
+        image:
+          attributes:
+            url:
+              blank: は必ず入力してください。
   record:
-    not_found: "Không tìm thấy %{object_name}"
+    not_found: "%{object_name}見つかりませんでした"
   layouts:
     menu_admin:
-      users: Quản trị viên
-      candidates: Ứng viên
-      posts: Bài báo
-      jobs: Thông tin tuyển dụng
-      slider_images: Slider Image
+      admins: 管理者
+      clients: お客様のご連絡先
+      posts: お知らせ
+      jobs: 求人情報
+      slider_images: Image
   admins:
     admins:
       index:
-        create: Thêm mới
+        create: 新しく追加します
         id: ID
-        title: Họ Tên
-        email: Email
+        name: お名前
+        email: メールアドレス
         role: Role
-        action: Thao Tác
-        confirm: Bạn muốn xóa Quản trị viên này?
+        action: 操作
+        confirm: この管理者を解消しますか？
       edit:
-        title: Chỉnh sửa thông tin Quản trị viên
+        title: 管理者情報を編集
+        permission_denied: この機能を利用する権限がありません。
       new:
-        title: Tạo mới Quản trị viên
+        title: 新しい管理者を追加
       admin_form:
-        name: Họ Tên
-        email: Email
+        name: お名前
+        email: メールアドレス
         password: Password
         confirmation_password: Confirmation password
         save: Save
       create:
-        success: Tao mới Quản trị viên thành công
-        failure: Tạo mới Quản trị viên thất bại
+        success: 新しい管理者の追加ができました
+        failure: 新しい管理者の追加に失敗しました
       update:
-        success: Chỉnh sửa thông tin Quản trị viên thành công
-        failure: Chỉnh sửa thông tin Quản trị viên thất bại
+        success: 管理者情報の編集ができました
+        failure: 管理者情報の編集に失敗しました
       destroy:
-        success: Xóa Quản trị viên thành công
-        failure: Xóa Quản trị viên thất bại
+        success: 管理者の解消ができました
+        failure: 管理者の解消に失敗しました
       publish:
-        success: "%{action} '%{admin}' thành công"
-        failure: "%{action} '%{admin}' thất bại"
+        success: "%{action} '%{admin}' 成功しました"
+        failure: "%{action} '%{admin}' 失敗しました"
     posts:
       edit:
-        title: Chỉnh sửa nội dung Bài Báo
+        title: お知らせの内容を編集
       new:
-        title: Tạo mới Bài báo
+        title: お知らせを新し作成します
       post_form:
-        title: Tiêu đề Bài báo
-        image: Ảnh Bài báo
-        content: Nội dung Bài báo
-        publish: Công khai?
+        title: お知らせの件名
+        image: お知らせの写真
+        content: お知らせの内容
+        publish: 公開?
         save: Save
       post:
-        publish: Công khai
-        unpublish: Không công khai
-        confirm: Bạn muốn xóa Bài viết này?
+        publish: 公開
+        unpublish: 非表示
+        confirm: このお知らせを解消しますか？
       index:
-        create: Tạo mới
+        create: 新しく作成
       create:
-        success: Tạo mới Bài báo thành công
-        failure: Tạo mới Bài báo thất bại
+        success: 新しくお知らせを作成できました
+        failure: 新しくお知らせの作成に失敗しました
       update:
-        success: Chỉnh sửa thông tin Bài báo thành công
-        failure: Chỉnh sửa thông tin Bài báo thất bại
+        success: お知らせ内容の編集ができました
+        failure: お知らせ内容に編集に失敗しました
       destroy:
         success: Xóa Bài báo thành công
         failure: Xóa Bài báo thất bại
       publish:
-        success: "%{action} '%{post}' thành công"
-        failure: "%{action} '%{post}' thất bại"
+        success: "%{action} '%{post}' 成功しました"
+        failure: "%{action} '%{post}' 失敗しました"
     jobs:
       index:
-        create: Tạo mới
+        create: 新しく作成
         id: ID
-        title: Tiêu đề Tin tuyển dụng
+        title: 求人情報の件名
         quantity: 募集人数
         place: 勤務地
         salary: 給料
         content: 仕事の内容
         expired_time: 募集期間
-        action: Action
-        confirm: Bạn muốn xóa Tin tuyển dụng này?
-
+        action: 操作
+        confirm: この求人情報を解消しますか？
       edit:
-        title: Chỉnh sửa Tin tuyển dụng
+        title: 求人情報を編集
       new:
-        title: Tạo mới Tin tuyển dụng
+        title: 求人情報を新しく作成
       job_form:
-        title: Tiêu đề Tin tuyển dụng
-        quantity: Số lượng
-        place: Địa điểm
-        salary: Lương
+        title: 求人情報の件名
+        quantity: 募集人数
+        place: 勤務地
+        salary: 給料
         save: Save
-        company_name: Tên công ty
-        cv_info: Thông tin CV
-        benefit: Chính sách đãi ngộ
-        requirement: Yêu cầu công việc
-        recruiment_type: Nội dung ứng tuyển
-        industry: Cách lấy VISA
+        content: 職種
+        working_hours: 勤務時間
+        allowance: 手当
+        salary_raise: 昇給
+        holiday: 休日
+        vacation: 休暇
+        social_insurance: 社会保険
+        welfare: 福利厚生
+        documents: 提出書類
       create:
-        success: Tạo mới Tin tuyển dụng thành công
-        failure: Tạo mới Tin tuyển dụng thất bại
+        success: 求人情報の追加ができました
+        failure: 求人情報の追加に失敗しました
       update:
-        success: Chỉnh sửa Tin tuyển dụng thành công
-        failure: Chỉnh sửa Tin tuyển dụng thất bại
+        success: 求人情報の編集ができました
+        failure: 求人情報の編集に失敗しました
       destroy:
-        success: Xóa Tin tuyển dụng thành công
-        failure: Xóa Tin tuyển dụng thất bại
+        success: 求人情報の解消ができました
+        failure: 求人情報の解消に失敗しました
       publish:
-        success: "%{action} '%{job}' thành công"
-        failure: "%{action} '%{job}' thất bại"
-    candidates:
+        success: "%{action} '%{job}' 成功しました"
+        failure: "%{action} '%{job}' 失敗しました"
+    clients:
       index:
-        title: Ứng viên
+        title: お客様のご連絡先
         id: ID
-        name: Họ tên
-        email: Email
-        phone_number: Số điện thoại
-        website: Website
-        content: Nội dung
-        action: Action
-        status: Trạng thái
-        contacted: Đã liên hệ
-        not_contact: Chưa liên hệ
+        company_name: 貴社名
+        department: 部署名
+        person_in_charge: ご担当者名
+        phone_number: 電話番号
+        email: メールアドレス
+        prefecture: 都道府県
+        address: ご住所
+        content: 内容
+        action: 操作
+        status: 状態
+        contacted: 連絡済み
+        not_contact: 未連絡
       contact:
-        contacted_success: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' thành công.
-        contacted_failure: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' không thành công.
-        not_contact_success: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' thành công.
-        not_contact_failure: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' không thành công.
+        contacted_success: Xác nhận [Đã liên lạc] với company '%{client}' thành công.
+        contacted_failure: Xác nhận [Đã liên lạc] với company '%{client}' không thành công.
+        not_contact_success: Xác nhận [Chưa liên lạc] với company '%{client}' thành công.
+        not_contact_failure: Xác nhận [Chưa liên lạc] với company '%{client}' không thành công.
       create:
-        success: Cảm ơn bạn đã để lại thông tin, Chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể
-        failure: Thông tin liên hệ của bạn không hợp lệ
+        success: "お問い合わせありがとうございます。\n後ほど弊社担当者よりご連絡いたしますので、\n今しばらくお待ちくださいますようよろしくお願い申し上げます。"
+        failure: 連絡情報が間違っています
     slider_images:
       edit:
-        title: Chỉnh sửa Image
+        title: 写真を編集
       new:
-        title: Tạo mới Image
+        title: 写真を新しく作成
       slider_image_form:
         slider_image: Image
-        publish: Công khai?
+        publish: 公開?
         save: Save
-        title: Tạo mới Image
+        title: 写真を更新
       slider_image:
-        publish: Công khai
-        unpublish: Không công khai
-        confirm: Bạn muốn công khai hình ảnh này?
+        publish: 公開
+        unpublish: 非表示
+        confirm: この写真を公開されますか？
       index:
-        create: Thay đổi Image
+        create: 写真を更新
       create:
-        success: Tạo mới Image thành công
-        failure: Tạo mới Image thất bại
+        success: 写真の更新ができました
+        failure: 写真の更新ができませんでした
       update:
-        success: Thay đổi Image thành công
-        failure: Thay đổi Image thất bại
+        success: 写真が変更できました
+        failure: 写真を変更できませんでした
       destroy:
-        success: Xóa Image thành công
-        failure: Xóa Image thất bại
+        success: 写真が解消されました
+        failure: 写真の解消に失敗しました
       publish:
-        success: "%{action} Image thành công"
-        failure: "%{action} Image thất bại"
+        success: "%{action} Image 成功しました"
+        failure: "%{action} Image 失敗しました"
   static_pages:
     bussiness_content:
       title: 事業内容
@@ -167,23 +257,24 @@ en:
     engineer_interpreter:
       title: エンジニア・通訳
     home:
-      btn_all_job: Xem thêm Tin tuyển dụng
+      btn_all_job: もっと見る
+      btn_all_posts: もっと見る
 
   posts:
     show:
-      comments: Comments
-      recent_posts: Tin tuyển dụng liên quan
-      share: "Chia sẻ:"
+      comments: コメント
+      recent_posts: 関連求人情報
+      share: "シェア:"
   comments:
     form:
-      title: Để lại bình luận
-      submit: Bình luận
-      remember: Ghi nhớ thông tin cho bình luận tiếp theo
-      name: Họ Tên
-      email: Email
-      comment: Nội dung bình luận
+      title: コメント
+      submit: コメント
+      remember: 次のコメントに記録されますか？
+      name: お名前
+      email: メールアドレス
+      comment: コメント内容
     create:
-      failure: Xin vui lòng thử lại
+      failure: もう一度やってください
   jobs:
     job_item:
       amount: 募集人数
@@ -197,18 +288,18 @@ en:
       requirement: 希望の人材
   shared:
     contact_form:
-      title: 連絡先を送る
+      title: サービスに関するお問い合わせ
       name: お名前
       email: メールアドレス
       phone_number: 電話番号
-      website: Website
-      content: コンテンツ
-      contact: 提出する
+      company_name: 会社名
+      content: お問い合わせ
+      contact: 内容を送信
   job_comments:
     form:
-      title: Để lại bình luận
-      submit: Bình luận
-      remember: Ghi nhớ thông tin cho bình luận tiếp theo
-      name: Họ Tên
-      email: Email
-      comment: Nội dung bình luận
+      title: コメント
+      submit: コメント
+      remember: 次のコメントに記録されますか？
+      name: お名前
+      email: メールアドレス
+      comment: コメント内容

@@ -35,7 +35,7 @@ Rails.application.routes.draw do
         get :publish
       end
     end
-    resources :candidates do
+    resources :clients do
       member do
         get :contact
       end
