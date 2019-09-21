@@ -2,9 +2,23 @@
  <%= render "layouts/slider", slider_images: @slider_images %>
 </div>
 
-<section data-aos="fade-up">
-    <div class="container">
-        <%= render "shared/banner" %>
+<section class="gf-jobs" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+        <%= render partial: "shared/pagetitle", locals: { pagetitle: '主要取引先企業' } %>
+        <div class="row">
+          <div class="col-md-3">
+            <%= image_tag "partner/logo-fuji-kogyosho.png"%>
+          </div>
+          <div class="col-md-3">
+            <%= image_tag "partner/logo.png"%>
+          </div>
+          <div class="col-md-3">
+            <%= image_tag "partner/logo-arvas.png"%>
+          </div>
+          <div class="col-md-3">
+            <%= image_tag "partner/logo-forrest-gump.png"%>
+          </div>
+        </div>
     </div>
 </section>
 
