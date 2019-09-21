@@ -1,2 +1,5 @@
-<div class="owl-carousel slider-image">
-</div>
+<ul class="slider_img">
+  <% slider_images.each do |image| %>
+    <li><%= image_tag image.url.url, class: "image-item"%></li>
+  <% end %>
+</ul><!--//slider_img-->

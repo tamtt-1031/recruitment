@@ -1,3 +1,128 @@
+.navbar {
+  z-index: 2;
+}
+.slider_css {
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+.slider_css .slider_img {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider_css .slider_img li {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 25s;
+  text-align:center;
+}
+.slider_css .slider_img li:nth-child(1) {
+  animation-name: slider-zoomin;
+  animation-delay: 0s;
+}
+.slider_css .slider_img li:nth-child(2) {
+  animation-name: slider-zoomin;
+  opacity: 0;
+  animation-delay: 5s;
+}
+.slider_css .slider_img li:nth-child(3) {
+  animation-name: slider-zoomin;
+  opacity: 0;
+  animation-delay: 10s;
+}
+.slider_css .slider_img li:nth-child(4) {
+  animation-name: slider-zoomin;
+  opacity: 0;
+  animation-delay: 15s;
+}
+.slider_css .slider_img li:nth-child(5) {
+  animation-name: slider-zoomin;
+  opacity: 0;
+  animation-delay: 20s;
+}
+
+/*.slider_css ul li:nth-child(4) {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/381167/animal4.jpg");
+  animation-name: slider-zoomout;
+  opacity: 0;
+  animation-delay: 21s;
+}
+.slider_css ul li:nth-child(5) {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/381167/animal5.jpg");
+  animation-name: slider-zoomin;
+  opacity: 0;
+  animation-delay: 29s;
+}*/
+.slider_css .slider_img li img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);  height:auto;
+}
+@media only screen and (max-width: 768px) {
+.slider_css .slider_img li img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  max-height: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);  height:auto;
+}
+}
+@keyframes slider-zoomin {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+    }
+}
+@keyframes slider-zoomout {
+  0% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  12.5% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  27.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
 .japan-chart-image {
   height: 350px;
 }

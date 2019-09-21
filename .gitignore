@@ -36,3 +36,4 @@ coverage/
 
 /swagger
 /public/uploads
+Gemfile.lock
