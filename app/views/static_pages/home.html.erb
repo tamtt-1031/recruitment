@@ -2,7 +2,7 @@
  <%= render "layouts/slider", slider_images: @slider_images %>
 </div>
 
-<section class="gf-jobs" data-aos="fade-up">
+<section class="mt50" data-aos="fade-up">
     <div class="container" data-aos="fade-up">
         <%= render partial: "shared/pagetitle", locals: { pagetitle: '主要取引先企業' } %>
         <div class="row">
@@ -22,6 +22,11 @@
     </div>
 </section>
 
+<section data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
+        <%= render partial: "shared/banner" %>
+  </div>
+</section>
 <section class="gf-jobs" data-aos="fade-up">
     <div class="container">
         <%= render partial: "shared/pagetitle", locals: { pagetitle: '求人情報一覧' } %>
