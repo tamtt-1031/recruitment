@@ -1,7 +1,7 @@
 <div class="job-lists">
     <% jobs.each do |job| %>
-        <div class="job-item">
-            <div class="job-detail">
+        <div class="job-item row">
+            <div class="job-detail col-md-5">
                 <h4>
                 <%= link_to job do %>
                     <%= job.title %>
@@ -18,7 +18,7 @@
                     </span>
                 </p>
             </div>
-            <div class="job-feature">
+            <div class="job-feature col-md-5">
                 <p class="mb0">
                     <strong class="mr5">給料:</strong>
                      <%= job.salary %>
@@ -33,7 +33,7 @@
 
             </div>
 
-            <div class="actions">
+            <div class="actions col-md-2">
                 <%= link_to '続きを読む', job, class: 'button button-small button-primary button-border' %>
             </div>
         </div>
