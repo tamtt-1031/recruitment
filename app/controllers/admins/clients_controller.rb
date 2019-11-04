@@ -3,7 +3,7 @@ class Admins::ClientsController < Admins::BaseController
   before_action :load_client, only: :contact
 
   def index
-    @clients = Client.order_by_contact_status
+    @clients = Client.order_by_contact_status.order_newest
   end
 
   def contact
